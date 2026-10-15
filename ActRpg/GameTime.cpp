@@ -1,11 +1,12 @@
-#include "GameTime.h"
-#include <chrono>
-
+ï»¿#include "GameTime.h"
+#include <iostream>
+#include <thread>
+#include <glc2d.h>
 using namespace std;
 
 int GameTime::Init()
 {
-	//begintime		= chrono::system_clock::now() ¿¡¼­ Ä³½ºÆÃ
+	begintime		= g2_TimeGetTime();
 	eplapsedTime	= {};
 	deltaTime		= {};			// millisecond
 	return 0;
@@ -13,8 +14,13 @@ int GameTime::Init()
 
 int GameTime::Update()
 {
-	// ÀÌ°Å ¾÷µ¥ÀÌÆ®
-	eplapsedTime = {};
-	deltaTime = {};			// millisecond
+	// test
+	this_thread::sleep_for(chrono::milliseconds(10));	// 0.01ì´ˆ sleep
+
+	auto currentTime = g2_TimeGetTime();
+	auto prevTime = eplapsedTime;
+	eplapsedTime = currentTime - begintime;
+	deltaTime = eplapsedTime - prevTime;			// millisecond
+	cout << "GameTime::Update() - eplapsedTime: " << eplapsedTime << ", deltaTime: " << deltaTime << endl;
 	return 0;
 }

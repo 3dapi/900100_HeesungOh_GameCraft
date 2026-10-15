@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "GameTime.h"
 #include "GraphicEngine.h"
@@ -30,7 +30,7 @@ protected:
 	GraphicEngine m_graphicEngine{};
 	GameTime	m_gameTime	 {};
 	GameInput*	m_pGameInput {};
-	GameScene*  m_pGameScene {};	// ÇöÀçÀÇ °ÔÀÓ¾À
+	GameScene*  m_pGameScene {};	// í˜„ì¬ì˜ ê²Œì„ì”¬
 };
 
 extern App* g_pApp;

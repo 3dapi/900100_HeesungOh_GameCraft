@@ -1,8 +1,8 @@
-//link the 2d game library
+ï»¿//link the 2d game library
 #if defined(_DEBUG)
-  #if defined(_M_X64) // 64-bit ¾ÆÅ°ÅØÃ³
+  #if defined(_M_X64) // 64-bit ì•„í‚¤í…ì²˜
     #pragma comment(lib, "glc2d_x64_debug.lib")
-  #elif defined(_M_IX86) // 32-bit ¾ÆÅ°ÅØÃ³
+  #elif defined(_M_IX86) // 32-bit ì•„í‚¤í…ì²˜
     #pragma comment(lib, "glc2d_win32_debug.lib")
   #endif
 #else
@@ -35,7 +35,7 @@ void GraphicEngine::SetColor(unsigned long color)
 
 int GraphicEngine::Init(const GAME_WINDOW& gameWindow)
 {
-	//sdk ÃÊ±âÈ­
+	//sdk ì´ˆê¸°í™”
 	auto hr = g2_InitSdk();
 	if (0 > hr)
 		return -1;
@@ -44,7 +44,7 @@ int GraphicEngine::Init(const GAME_WINDOW& gameWindow)
 	g2_SetRender(GraphicEngine::Render);
 
 
-	// À©µµ¿ì »ı¼º
+	// ìœˆë„ìš° ìƒì„±
 	hr = g2_CreateWin(gameWindow.x
 					, gameWindow.y
 					, gameWindow.scnW, gameWindow.scnH
@@ -60,13 +60,13 @@ int GraphicEngine::Init(const GAME_WINDOW& gameWindow)
 
 void GraphicEngine::Destroy()
 {
-	// À©µµ¿ì ÇØÁ¦
+	// ìœˆë„ìš° í•´ì œ
 	g2_DestroyWin();
 }
 
 int GraphicEngine::Run()
 {
-	// ½ÇÇà
+	// ì‹¤í–‰
 	auto r = g2_Run();
 	return r;
 }

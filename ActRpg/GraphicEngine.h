@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <glc2d.h>
 #include <string>
 
@@ -14,7 +14,7 @@ public:
 		float scnScale = 1.0F;
 	};
 
-	// �⺻�Լ�
+	// 기본함수
 public:
 	int Init(const GraphicEngine::GAME_WINDOW& gameWindow);
 	void Destroy();

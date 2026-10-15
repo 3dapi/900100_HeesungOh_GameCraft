@@ -1,4 +1,4 @@
-#include "App.h"
+ï»¿#include "App.h"
 #include "GameInput.h"
 #include "GameScene.h"
 
@@ -14,17 +14,19 @@ App::~App()
 
 int App::Init()
 {
-	// Glc2d ÃÊ±âÈ­
+	// Glc2d ì´ˆê¸°í™”
 	if (0 > m_graphicEngine.Init(m_gameWin))
 		return -1;
 
 	m_graphicEngine.SetColor(0xFF006699);
 
-	// GameTime ÃÊ±âÈ­
+	// GameTime ì´ˆê¸°í™”
 	m_gameTime.Init();
 
+	// í°íŠ¸ íŒŒì¼ ë¡œë“œ
+	g2_FontRegisterFile("resource/netmarbleM.ttf");
 
-	// Input ÃÊ±âÈ­
+	// Input ì´ˆê¸°í™”
 	m_pGameInput = new GameInput;
 	if (0 > m_pGameInput->Init())
 	{
@@ -32,7 +34,7 @@ int App::Init()
 		return -2;
 	}
 
-	//°ÔÀÓ ¾À ÃÊ±âÈ­
+	//ê²Œì„ ì”¬ ì´ˆê¸°í™”
 	m_pGameScene = new GameScene;
 	if(0> m_pGameScene->Init())
 	{
@@ -55,16 +57,16 @@ void App::Destroy()
 
 int  App::Update()
 {
-	// GameTime ¾÷µ¥ÀÌÆ®
+	// GameTime ì—…ë°ì´íŠ¸
 	m_gameTime.Update();
 	
-	// Input ¾÷µ¥ÀÌÆ®
+	// Input ì—…ë°ì´íŠ¸
 	if (0 > m_pGameInput->Update())
 	{
 		return -1;
 	}
 
-	// GameScene ¾÷µ¥ÀÌÆ®
+	// GameScene ì—…ë°ì´íŠ¸
 	if(0>m_pGameScene->Update())
 	{
 		return -1;
@@ -76,7 +78,7 @@ int  App::Update()
 
 int  App::Render()
 {
-	// GameScene ·»´õ¸µ
+	// GameScene ë Œë”ë§
 	if (0 > m_pGameScene->Render())
 	{
 		return -1;
