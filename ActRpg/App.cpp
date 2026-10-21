@@ -4,7 +4,7 @@
 
 App::App()
 {
-
+	m_pGameInput = new GameInput;
 }
 
 App::~App()
@@ -27,7 +27,6 @@ int App::Init()
 	g2_FontRegisterFile("resource/netmarbleM.ttf");
 
 	// Input 초기화
-	m_pGameInput = new GameInput;
 	if (0 > m_pGameInput->Init())
 	{
 		Destroy();

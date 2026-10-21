@@ -1,5 +1,9 @@
-﻿#include "GameScene.h"
-#include <glc2d.h>
+﻿#include <glc2d.h>
+#include <windows.h>
+#include <chrono>
+#include <thread>
+#include "GameScene.h"
+#include "GameInput.h"
 
 int GameScene::Init()
 {
@@ -9,6 +13,13 @@ int GameScene::Init()
 
 int GameScene::Update()
 {
+	auto keyEvent = GetGameInput()->GetKeyState(VK_RIGHT);
+	if (keyEvent == EInput::EINPUT_DOWN)
+	{
+		// next window
+	}
+	std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
 	return 0;
 }
 

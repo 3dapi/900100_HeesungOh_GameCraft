@@ -83,5 +83,8 @@
     <ClInclude Include="GamePlayer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="packages\glc2d.0.1.0.8\build\native\include\glc2d.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
