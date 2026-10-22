@@ -28,6 +28,11 @@ int GameInput::MouseDelta() const
 }
 int GameInput::GetKeyState(KEYCODE keyCode) const
 {
-	auto keys = g2_GetKeyboard();										// 키보드(0~255)
+	auto keys = g2_GetKeyboard();			// 키보드(0~255)
 	return keys[keyCode];
+}
+
+int GameInput::GetMouseEvent(int nMouse) const
+{
+	return g2_GetMouseEvent(nMouse);		// 마우스 이벤트 (0: LButton, 1: RButton, 2: MButton)
 }

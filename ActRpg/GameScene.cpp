@@ -5,9 +5,19 @@
 #include "GameScene.h"
 #include "GameInput.h"
 
+GameScene::GameScene()
+{
+	m_message = "Game Scene";
+}
+
 int GameScene::Init()
 {
 	m_font1 = g2_FontCreate("netmarble Medium", 64);
+	return 0;
+}
+
+int GameScene::Destroy()
+{
 	return 0;
 }
 
@@ -25,6 +35,6 @@ int GameScene::Update()
 
 int GameScene::Render()
 {
-	g2_FontDrawText(m_font1, { 10, 10 }, 0xFFFF00FF, "Game Scene");
+	g2_FontDrawText(m_font1, { 10, 10 }, 0xFFFF00FF, m_message.c_str());
 	return 0;
 }
