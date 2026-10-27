@@ -23,7 +23,7 @@ App::App()
 
 App::~App()
 {
-
+	Destroy();
 }
 
 int App::Init()
@@ -62,9 +62,13 @@ void App::Destroy()
 	if (m_pGameInput) {
 		delete m_pGameInput; m_pGameInput = nullptr;
 	}
-	if (m_pGameScene) {
-		delete m_pGameScene; m_pGameScene = nullptr;
+	for (auto scene : m_sceneList)
+	{
+		scene->Destroy();
+		delete scene;
 	}
+	m_sceneList.clear();
+	m_pGameScene = nullptr;
 }
 
 int  App::Update()
@@ -78,7 +82,8 @@ int  App::Update()
 		m_sceneCurrent = m_sceneNext;		// 다음 씬을 현재 씬으로
 		m_pGameScene   = m_sceneList[m_sceneCurrent];
 
-		m_pGameScene->Init();				// 설정된 현재 씬을 초기화
+		if (m_pGameScene->Init() < 0)
+			return -1;
 	}
 	 
 	// GameTime 업데이트

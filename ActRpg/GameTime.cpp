@@ -21,6 +21,6 @@ int GameTime::Update()
 	auto prevTime = eplapsedTime;
 	eplapsedTime = currentTime - begintime;
 	deltaTime = eplapsedTime - prevTime;			// millisecond
-	cout << "GameTime::Update() - eplapsedTime: " << eplapsedTime << ", deltaTime: " << deltaTime << endl;
+	// cout << "GameTime::Update() - eplapsedTime: " << eplapsedTime << ", deltaTime: " << deltaTime << endl;
 	return 0;
 }

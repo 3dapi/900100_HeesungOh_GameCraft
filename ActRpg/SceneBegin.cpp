@@ -9,7 +9,7 @@ SceneBegin::SceneBegin()
 int SceneBegin::Update()
 {
 	//auto keyEvent = GetGameInput()->GetMouseEvent(0);
-	auto keyEvent = GetGameInput()->GetMouseEvent(VK_RIGHT);
+	auto keyEvent = GetGameInput()->GetKeyState(VK_RIGHT);
 	if (keyEvent == EInput::EINPUT_DOWN)
 	{
 		// next window

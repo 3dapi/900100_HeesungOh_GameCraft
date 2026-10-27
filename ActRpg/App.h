@@ -22,6 +22,9 @@ public:
 
 public:
 	void ChangeScene(GAME_PHASE nextScene);
+	float GetDeltaSeconds() const { return static_cast<float>(m_gameTime.deltaTime) * 0.001F; }
+	int GetScreenWidth() const { return m_gameWin.scnW; }
+	int GetScreenHeight() const { return m_gameWin.scnH; }
 
 protected:
 	GraphicEngine::GAME_WINDOW m_gameWin

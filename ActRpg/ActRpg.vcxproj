@@ -77,6 +77,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -91,6 +92,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -103,6 +105,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -117,6 +120,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,12 +129,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
+    <ClCompile Include="GameComponent.cpp" />
     <ClCompile Include="GameBossMob.cpp" />
     <ClCompile Include="GameCharacter.cpp" />
     <ClCompile Include="GameInput.cpp" />
     <ClCompile Include="GameMob.cpp" />
     <ClCompile Include="GameNpc.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GamePlayer.cpp" />
+    <ClCompile Include="MapBackground.cpp" />
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="GameTime.cpp" />
     <ClCompile Include="GraphicEngine.cpp" />
@@ -138,6 +145,8 @@
     <ClCompile Include="SceneLobby.cpp" />
     <ClCompile Include="ScenePlay.cpp" />
     <ClCompile Include="ScenePlayResult.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="SpriteFlipbook.cpp" />
     <ClCompile Include="_main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -145,12 +154,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App.h" />
+    <ClInclude Include="GameComponent.h" />
     <ClInclude Include="GameBossMob.h" />
     <ClInclude Include="GameCharacter.h" />
     <ClInclude Include="GameInput.h" />
     <ClInclude Include="GameMob.h" />
     <ClInclude Include="GameNpc.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="GamePlayer.h" />
+    <ClInclude Include="MapBackground.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="GameTime.h" />
     <ClInclude Include="GraphicEngine.h" />
@@ -159,6 +171,8 @@
     <ClInclude Include="SceneLobby.h" />
     <ClInclude Include="ScenePlay.h" />
     <ClInclude Include="ScenePlayResult.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="SpriteFlipbook.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
