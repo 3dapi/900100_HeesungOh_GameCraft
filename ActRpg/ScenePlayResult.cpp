@@ -1,4 +1,4 @@
-#include "ScenePlayResult.h"
+﻿#include "ScenePlayResult.h"
 #include "GameInput.h"
 #include "App.h"
 

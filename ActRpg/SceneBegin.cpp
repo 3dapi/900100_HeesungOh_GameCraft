@@ -1,4 +1,4 @@
-#include "SceneBegin.h"
+﻿#include "SceneBegin.h"
 #include "GameInput.h"
 #include "App.h"
 SceneBegin::SceneBegin()
