@@ -21,7 +21,7 @@ public:
 			GetFrames() const { return m_frames; }
 
 protected:
-	std::vector<SpriteRect> m_frames;
+	std::vector<SpriteRect> m_frames			;
 	size_t					m_frameIndex		{};
 	double					m_elapsedSeconds	{};
 	double					m_secondsPerFrame	{0.1};
