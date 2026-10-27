@@ -38,7 +38,7 @@ int App::Init()
 	m_gameTime.Init();
 
 	// 폰트 파일 로드
-	g2_FontRegisterFile("resource/netmarbleM.ttf");
+	g2_FontRegisterFile("resource/font/netmarbleM.ttf");
 
 	// Input 초기화
 	if (0 > m_pGameInput->Init())
